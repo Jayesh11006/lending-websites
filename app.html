@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith - Achieve Your Peak Productivity</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111827;
+        }
+        .hero-bg {
+            background-color: #f3f4f6;
+            background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+            background-size: 2rem 2rem;
+        }
+        .store-button {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .store-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="absolute top-0 left-0 right-0 z-50 bg-transparent">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11l7-7 7 7M5 19l7-7 7 7"/></svg>
+                <span class="text-2xl font-bold text-slate-800">Zenith</span>
+            </div>
+            <a href="#download" class="hidden md:inline-block bg-slate-800 text-white font-semibold px-6 py-2 rounded-full hover:bg-slate-900 transition-colors duration-300">
+                Download Now
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg pt-32 pb-20 md:pt-40 md:pb-28">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="text-center lg:text-left">
+                        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">
+                            Organize Your Life, Unleash Your Focus.
+                        </h1>
+                        <p class="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 mb-10">
+                            Zenith is the all-in-one productivity app designed to help you manage tasks, track goals, and build better habits. Stop juggling apps and start achieving your peak potential.
+                        </p>
+                        <div class="flex justify-center lg:justify-start items-center space-x-4">
+                            <a href="#" class="store-button inline-block">
+                                <img src="https://placehold.co/180x60/000000/ffffff?text=App+Store" alt="Download on the App Store" class="h-14 md:h-16 rounded-lg">
+                            </a>
+                            <a href="#" class="store-button inline-block">
+                                <img src="https://placehold.co/180x60/000000/ffffff?text=Google+Play" alt="Get it on Google Play" class="h-14 md:h-16 rounded-lg">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- App Mockup -->
+                    <div class="flex justify-center items-center">
+                        <img src="https://placehold.co/400x800/e5e7eb/1f2937?text=Zenith+App" alt="Zenith App Mockup" class="max-w-xs w-full rounded-3xl shadow-2xl transform lg:rotate-6">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-slate-800">Everything You Need to Be Productive</h2>
+                    <p class="text-slate-500 mt-3 text-lg">Zenith combines the best productivity tools into one simple, beautiful app.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Feature 1 -->
+                    <div class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full mx-auto mb-5">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Smart Task Management</h3>
+                        <p class="text-slate-500">Organize your tasks with projects, tags, and priorities. Never miss a deadline again.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full mx-auto mb-5">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Focus Timer & Analytics</h3>
+                        <p class="text-slate-500">Use the integrated Pomodoro timer to beat procrastination and track where your time goes.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full mx-auto mb-5">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Goal & Habit Tracker</h3>
+                        <p class="text-slate-500">Define your long-term goals and build positive daily habits with our intuitive tracker.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="flex justify-center">
+                         <img src="https://placehold.co/500x700/e2e8f0/1f2937?text=App+Interface" alt="Zenith App Interface" class="rounded-2xl shadow-xl max-w-md w-full">
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-bold text-slate-800 mb-6">Get Started in 3 Easy Steps</h2>
+                        <div class="space-y-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-slate-800 text-white font-bold text-xl rounded-full">1</div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-slate-800">Capture Your Tasks</h3>
+                                    <p class="text-slate-500 mt-1">Quickly add any task or idea that comes to your mind. Organize them later.</p>
+                                </div>
+                            </div>
+                             <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-slate-800 text-white font-bold text-xl rounded-full">2</div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-slate-800">Plan Your Day</h3>
+                                    <p class="text-slate-500 mt-1">Use the 'Today' view to plan your day and focus on what's most important.</p>
+                                </div>
+                            </div>
+                             <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-slate-800 text-white font-bold text-xl rounded-full">3</div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-slate-800">Achieve Your Goals</h3>
+                                    <p class="text-slate-500 mt-1">Complete tasks, build habits, and watch your progress with our insightful analytics.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-slate-800">Loved by Thousands of Users</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-200">
+                        <p class="text-slate-600 mb-6">"Zenith has completely replaced three of my other apps. It's so simple and powerful. My productivity has skyrocketed!"</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/50x50/1e293b/ffffff?text=AK" alt="User Avatar" class="h-12 w-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-slate-800">Aarav K.</p>
+                                <p class="text-sm text-slate-500">Freelance Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-200">
+                        <p class="text-slate-600 mb-6">"As a student, managing classes, assignments, and personal projects was a nightmare. Zenith brought order to my chaos. The habit tracker is a game-changer."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/50x50/1e293b/ffffff?text=SP" alt="User Avatar" class="h-12 w-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-slate-800">Sneha P.</p>
+                                <p class="text-sm text-slate-500">University Student</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-200">
+                        <p class="text-slate-600 mb-6">"The design is just beautiful. It's a joy to use every day. Finally, a productivity app that doesn't feel like a chore."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/50x50/1e293b/ffffff?text=MJ" alt="User Avatar" class="h-12 w-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-slate-800">Mihir J.</p>
+                                <p class="text-sm text-slate-500">Product Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="download" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="bg-slate-800 rounded-2xl text-center text-white p-12 md:p-20">
+                    <h2 class="text-4xl font-extrabold mb-4">Take Control of Your Productivity Today</h2>
+                    <p class="text-slate-300 text-lg max-w-2xl mx-auto mb-10">Download Zenith for free and start your journey towards a more organized and focused life. Available on iOS and Android.</p>
+                    <div class="flex justify-center items-center space-x-4">
+                        <a href="#" class="store-button inline-block">
+                            <img src="https://placehold.co/180x60/ffffff/000000?text=App+Store" alt="Download on the App Store" class="h-14 md:h-16 rounded-lg">
+                        </a>
+                        <a href="#" class="store-button inline-block">
+                            <img src="https://placehold.co/180x60/ffffff/000000?text=Google+Play" alt="Get it on Google Play" class="h-14 md:h-16 rounded-lg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+            <p>&copy; 2025 Zenith Labs. All Rights Reserved.</p>
+            <div class="mt-4 space-x-6">
+                <a href="#" class="hover:text-slate-800">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-800">Terms of Service</a>
+                <a href="#" class="hover:text-slate-800">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

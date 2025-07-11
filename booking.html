@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjit Singh Live in Bangalore - Book Tickets</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Alpine.js for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Custom script for countdown timer -->
+    <script>
+        function countdown() {
+            return {
+                days: '00',
+                hours: '00',
+                minutes: '00',
+                seconds: '00',
+                eventDate: new Date('2025-10-26T19:00:00'),
+                init() {
+                    this.updateCountdown();
+                    setInterval(() => {
+                        this.updateCountdown();
+                    }, 1000);
+                },
+                updateCountdown() {
+                    const now = new Date();
+                    const diff = this.eventDate - now;
+
+                    if (diff < 0) {
+                        this.days = '00';
+                        this.hours = '00';
+                        this.minutes = '00';
+                        this.seconds = '00';
+                        return;
+                    }
+
+                    this.days = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+                    this.hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                    this.minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                    this.seconds = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #0f172a; /* Dark blue background */
+            color: #f1f5f9;
+        }
+        .hero-gradient-bg {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, #0f172a 100%), 
+                        url('https://placehold.co/1920x1080/000000/FFFFFF?text=Arjit+Singh+Concert') center center / cover no-repeat;
+        }
+        .brand-gradient-text {
+            background: linear-gradient(to right, #ec4899, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .ticket-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .ticket-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.3);
+        }
+    </style>
+</head>
+<body x-data="countdown()">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/50 backdrop-blur-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold brand-gradient-text">ARJIT SINGH LIVE</span>
+            <a href="#tickets" class="bg-pink-600 text-white font-semibold px-6 py-2 rounded-full hover:bg-pink-700 transition-colors duration-300">
+                Book Tickets
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient-bg pt-40 pb-20 md:pt-48 md:pb-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-7xl font-black text-white leading-tight mb-4">
+                    ARJIT SINGH
+                    <span class="block brand-gradient-text">LIVE IN BANGALORE</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+                    Experience the voice of a generation in a one-of-a-kind concert. Get ready for an unforgettable night of music and magic.
+                </p>
+                <div class="flex justify-center items-center space-x-4 text-lg font-semibold text-slate-200 mb-12">
+                    <span><i class="fas fa-calendar-alt mr-2"></i>Sat, 26 Oct 2025</span>
+                    <span>|</span>
+                    <span><i class="fas fa-map-marker-alt mr-2"></i>Manpho Convention Centre, Bengaluru</span>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="flex justify-center space-x-4 md:space-x-8 text-white mb-12">
+                    <div class="text-center">
+                        <div class="text-4xl md:text-6xl font-bold" x-text="days">00</div>
+                        <div class="text-sm text-slate-400">Days</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-6xl font-bold" x-text="hours">00</div>
+                        <div class="text-sm text-slate-400">Hours</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-6xl font-bold" x-text="minutes">00</div>
+                        <div class="text-sm text-slate-400">Minutes</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-6xl font-bold" x-text="seconds">00</div>
+                        <div class="text-sm text-slate-400">Seconds</div>
+                    </div>
+                </div>
+
+                <a href="#tickets" class="bg-pink-600 text-white font-bold px-10 py-4 rounded-full text-lg hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 inline-block shadow-lg shadow-pink-500/30">
+                    GET YOUR TICKETS NOW
+                </a>
+            </div>
+        </section>
+
+        <!-- Ticket Section -->
+        <section id="tickets" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-white">Choose Your Experience</h2>
+                    <p class="text-slate-400 mt-3 text-lg">Select the ticket that's right for you. All prices are inclusive of taxes.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Ticket 1: Silver -->
+                    <div class="ticket-card rounded-xl p-8 text-center flex flex-col">
+                        <h3 class="text-2xl font-bold text-slate-300">SILVER ZONE</h3>
+                        <p class="text-4xl font-extrabold text-white my-6">₹1,499</p>
+                        <ul class="space-y-3 text-slate-300 mb-8 flex-grow">
+                            <li>Standing Zone</li>
+                            <li>F&B Stalls Access</li>
+                            <li>-</li>
+                        </ul>
+                        <button class="w-full bg-slate-600 text-white font-semibold py-3 rounded-lg hover:bg-slate-700 transition-colors">Select Tickets</button>
+                    </div>
+
+                    <!-- Ticket 2: Gold (Recommended) -->
+                    <div class="ticket-card rounded-xl p-8 text-center flex flex-col relative overflow-hidden border-2 border-pink-500">
+                        <div class="absolute top-0 right-0 bg-pink-500 text-white text-xs font-bold px-4 py-1 transform translate-x-1/4 -translate-y-1/4 rotate-45">POPULAR</div>
+                        <h3 class="text-2xl font-bold text-pink-400">GOLD ZONE</h3>
+                        <p class="text-4xl font-extrabold text-white my-6">₹2,999</p>
+                        <ul class="space-y-3 text-slate-300 mb-8 flex-grow">
+                            <li>Seated Zone (Closer View)</li>
+                            <li>F&B Stalls Access</li>
+                            <li>Dedicated Entry</li>
+                        </ul>
+                        <button class="w-full bg-pink-600 text-white font-semibold py-3 rounded-lg hover:bg-pink-700 transition-colors">Select Tickets</button>
+                    </div>
+
+                    <!-- Ticket 3: Platinum -->
+                    <div class="ticket-card rounded-xl p-8 text-center flex flex-col">
+                        <h3 class="text-2xl font-bold text-orange-400">PLATINUM LOUNGE</h3>
+                        <p class="text-4xl font-extrabold text-white my-6">₹5,999</p>
+                        <ul class="space-y-3 text-slate-300 mb-8 flex-grow">
+                            <li>Premium Seating (Front Rows)</li>
+                            <li>Complimentary Drink & Snack</li>
+                            <li>VIP Entry & Parking</li>
+                        </ul>
+                        <button class="w-full bg-orange-500 text-white font-semibold py-3 rounded-lg hover:bg-orange-600 transition-colors">Select Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue Section -->
+        <section class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold text-white mb-4">Event Venue</h2>
+                        <p class="text-2xl font-semibold text-slate-300 mb-2">Manpho Convention Centre</p>
+                        <p class="text-slate-400 mb-6">No. 91-4, Veeranna Palya, Nagawara Ring Road, Opp. BEL Corporate Office, Bengaluru, Karnataka 560045</p>
+                        <a href="https://www.google.com/maps/place/Manpho+Convention+Centre" target="_blank" class="inline-block bg-slate-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors">
+                            Get Directions on Google Maps
+                        </a>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/600x400/334155/94a3b8?text=Venue+Map+Location" alt="Venue Map" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="text-4xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+                <div class="space-y-4" x-data="{ open: 1 }">
+                    <!-- FAQ 1 -->
+                    <div class="bg-slate-800 rounded-xl">
+                        <button @click="open = open === 1 ? null : 1" class="w-full flex justify-between items-center p-6 text-left">
+                            <span class="text-lg font-semibold text-white">What is the age limit for the event?</span>
+                            <svg class="w-6 h-6 transition-transform text-slate-400" :class="{'rotate-180': open === 1}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="open === 1" x-collapse class="px-6 pb-6 text-slate-300">
+                            <p>This event is open to all ages. However, children below 5 years are not recommended due to high sound levels.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="bg-slate-800 rounded-xl">
+                        <button @click="open = open === 2 ? null : 2" class="w-full flex justify-between items-center p-6 text-left">
+                            <span class="text-lg font-semibold text-white">Is parking available at the venue?</span>
+                            <svg class="w-6 h-6 transition-transform text-slate-400" :class="{'rotate-180': open === 2}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="open === 2" x-collapse class="px-6 pb-6 text-slate-300">
+                            <p>Yes, limited parking is available at the venue on a first-come, first-served basis. We recommend using public transport or ride-sharing services.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="bg-slate-800 rounded-xl">
+                        <button @click="open = open === 3 ? null : 3" class="w-full flex justify-between items-center p-6 text-left">
+                            <span class="text-lg font-semibold text-white">What items are not allowed inside?</span>
+                            <svg class="w-6 h-6 transition-transform text-slate-400" :class="{'rotate-180': open === 3}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="open === 3" x-collapse class="px-6 pb-6 text-slate-300">
+                            <p>Professional cameras, outside food and beverages, bags larger than A4 size, and any sharp objects are strictly prohibited.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400">
+            <p>&copy; 2025 Live Events Inc. All Rights Reserved.</p>
+            <p class="text-sm mt-2">For support, contact us at support@liveevents.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
